@@ -10,7 +10,7 @@
     // B : auto
     // C : poids lourds
     // D : transport en commun
-    let permis =s
+    let permis =
         [{
             "nom": "Riri",
             "permis": ["B"],
@@ -54,14 +54,14 @@
                 }]
             }
         ]
-    let textHTML = "" // liste des véhicules
-    let nom = "";
-    let marque = "";
-    let modele = "";
+    let textHTML = "" ;// liste des véhicules
+   // let nom = "";
+   // let marque = "";
+   // let modele = "";
     for (i in permis) {
-        textHTML += "<h1> Véhicules de " + ###TODO## + "</h1>";
+        textHTML += "<h1> Véhicules de " + permis[i].nom + "</h1>";
         for (j in permis[i].vehicule) {
-            textHTML += ###TODO## + " " + ###TODO## + "<br>";
+            textHTML += permis[i].vehicule[j].marque + " " + permis[i].vehicule[j].modele + "<br>";
         }
     }
     document.write(textHTML);
